@@ -1,0 +1,12 @@
+import java.util.*;
+class Solution {
+	public static void main(String args[]) {
+		Scanner scn = new Scanner(System.in);
+        int PrincipalAmount = scn.nextInt();
+        float RateOfInterest = scn.nextFloat();
+        int TimePeriod  = scn.nextInt();
+		float SimpleInterest;
+        SimpleInterest = PrincipalAmount*RateOfInterest*TimePeriod/100;
+		System.out.println((int)SimpleInterest);
+	}
+}
