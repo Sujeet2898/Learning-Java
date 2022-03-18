@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+public static int fibo(int n)	{
+	if(n==1	||	n==2)	{                //Base	Case
+	return 1;
+	}
+	int a	=	fibo(n-1);               //Recursive	call
+	int b	=	fibo(n-2);               //Recursive	call
+	return a + b;                    //Small	Calculation and	return	statement
+}
+	
+	public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        System.out.println(fibo(n));;
+    
+	}
+}
