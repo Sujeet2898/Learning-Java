@@ -1,0 +1,23 @@
+Problem Statement
+Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E), and Step Size (W), you need to convert all Fahrenheit values from Start to End at the gap of W into their corresponding Celsius values and print the table.
+Note:
+Print the floor of the Celsius values if they are non-negative else print its ceil value. 
+
+
+
+import java.util.*;
+class Solution {
+	public static void main(String args[]) {
+		Scanner scn = new Scanner(System.in);
+         int S = scn.nextInt();
+         int E = scn.nextInt();
+		 int W = scn.nextInt();
+        
+        int Celsius;
+        while(S<=E){
+            Celsius =(5*(S-32))/9; 
+            System.out.println(S+" "+Celsius);
+            S+=W;
+        }
+	}
+}
