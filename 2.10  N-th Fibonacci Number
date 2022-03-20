@@ -1,0 +1,99 @@
+Problem Statement
+You are given an integer ‘N’, your task is to find and return the N’th Fibonacci number using matrix exponentiation.
+Since the answer can be very large, return the answer modulo 10^9 +7.
+Fibonacci Number Is Calculated Using The Following Formula:
+F(n) = F(n-1) + F(n-2), 
+Where, F(1) = F(2) = 1.
+
+
+N-th Fibonacci Number:
+
+public class Solution {
+    public static int fibonacciNumber(int n) {
+        int mod = (int) 1e9 + 7;
+        
+		// Base Case.
+		if (n <= 1){
+			return n;
+		}
+	
+		// Recursive call.
+		return (fibonacciNumber(n - 1) + fibonacciNumber(n - 2)) % mod;    
+	}
+
+}
+
+
+
+
+N-th Fibonacci Number:
+
+import java.util.*;
+public class Solution {
+public static int fibonacciNumber(int n)	{
+	if(n==1	||	n==2)	{                //Base	Case
+	return 1;
+	}
+	int a	=	fibonacciNumber(n-1);               //Recursive	call
+	int b	=	fibonacciNumber(n-2);               //Recursive	call
+	return a + b;                    //Small	Calculation and	return	statement
+}
+	
+	public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        System.out.println(fibonacciNumber(n));;
+    
+	}
+}
+
+
+
+
+
+
+
+Fibonacci sequence till nth term:
+
+import java.util.*;
+public class Main{
+	public static void printFib(int a, int b, int n) {
+	    if(n == 0) {
+	        return;
+	    }
+	    
+	int c = a + b;
+	System.out.println(c);
+	printFib(b, c, n - 1);
+	}
+	
+	public static void main(String[] args) {
+	    int a = 0, b = 1;
+		System.out.println(a);
+		System.out.println(b);
+		Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        printFib(a, b, n - 2);
+	}
+}
+
+
+
+Fibonacci sequence till nth term:
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+	    int a = 0, b = 1;
+		for (int i = 0; i <= n; i++) {
+		    System.out.println(a);
+		    int c = a + b;
+		    a = b;
+		    b = c;
+		}
+	}
+}
+
+
