@@ -1,0 +1,26 @@
+Write a program to input an integer N and print the sum of all its even digits and all its odd digits separately.
+Digits Mean Numbers, Not The Places! If The Given Integer Is "13245", Even Digits Are 2 & 4, And Odd Digits Are 1, 3 & 5.
+
+
+
+
+
+import java.util.Scanner;
+class Solution {
+	public static void main(String[] args) {
+    	Scanner scn = new Scanner(System.in);
+		int N =scn.nextInt();
+        int sumOfeven=0,sumOfodd=0;
+        while(N != 0){
+            int temp = N % 10;
+            if(temp % 2 == 0){
+              sumOfeven += temp;
+            }
+            if(temp % 2 != 0){
+            sumOfodd += temp;
+            }
+            N = (N/10);
+        }
+	    System.out.println(sumOfeven+" "+sumOfodd);
+    }
+}
