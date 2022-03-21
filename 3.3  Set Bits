@@ -1,0 +1,65 @@
+Problem Statement
+Write a program to count the number of 1's in the binary representation of an integer.
+
+
+// Easy Way to solve the question.
+public class Solution {
+    /**
+    * Solving this question using 
+    * bitwise operator -> & operator
+    *
+    * take int count = 0;
+    *    input =9;
+    *             9 ->  1001
+    *             1 ->  0001
+    *                 -------- 
+    *                   0001
+    *                 --------  
+    *      if ((9&1)==1){
+    *         count++;
+    *      }
+    *
+    * and then Right shift the value 9
+    *               i.e  9 >> 1
+    *
+    *
+    * 9 will become -> 100 
+    *               i.e   4
+    *     then    4 ->  100
+    *             1 ->  001
+    *                 -------- 
+    *                   001
+    *                 --------  
+    *      if ((4&1)==1){
+    *         count++;
+    *      }
+    * keep on going untill 9 become 0, then return the value of 
+    *                 count;
+    *
+    *  
+    */
+
+
+
+import java.util.*;
+public class Solution {
+    public static int countSetBits(int n) {
+		 int count = 0;
+        while(n>0){
+            if ((n&1)==1){
+                count++;
+            }
+            n=n>>1;
+        }
+        	
+        return count;
+	}
+
+
+	public static void main(String[] args) {
+	   Scanner sc =  new Scanner(System.in);
+		int n = sc.nextInt();
+	    System.out.println( countSetBits(n));
+	
+	}
+}
