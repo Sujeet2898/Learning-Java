@@ -1,0 +1,38 @@
+Problem Statement
+Write a program to find the total number of a primes number in a given interval.
+Given two integers S and E, count all primes between S and E.
+
+
+
+
+
+import java.util.Scanner;
+class CountPrime {
+	public static int totalPrime(int s, int e) {
+       int count = 0;
+        while(s<=e){
+            int cnt = 0;
+            for(int i =2 ; i<=s ;i++){
+                if(s%i == 0){
+                    cnt++;
+                }
+              }
+            if(cnt==1){
+                count++;
+            }
+            s++;
+        }
+        return count;  
+    }
+}
+
+class Solution {
+	public static void main(String args[]) {
+		
+		CountPrime obj = new CountPrime();
+		Scanner sc = new Scanner(System.in);
+		int s = sc.nextInt();
+		int e = sc.nextInt();
+		System.out.println(obj.totalPrime(s, e));
+	}
+}
