@@ -36,12 +36,16 @@ Part 3: Methods in Java
 4. Total Prime
 
 Part 4: Arrays
-1. First index of element
-2. Last index of element
-3. Reverse The Array
-4. Rotate array
-5. Sort 0 1 2
-6. Kth Smallest and Largest Element of Array
+1. Add elements of two arrays
+2. Find if an element is present in the array or not
+3. Find maximum and minimum in the array
+4. Count pairs with given sum in the array
+5. First index of element
+6. Last index of element
+7. Reverse The Array
+8. Rotate array
+9. Sort 0 1 2
+10. Kth Smallest and Largest Element of Array
 
 Part 5: Strings
 1. Count Words
