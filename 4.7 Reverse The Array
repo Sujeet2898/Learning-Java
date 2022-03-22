@@ -5,6 +5,45 @@ We have an array ARR = {1, 2, 3, 4, 5, 6} and M = 3 , considering 0
 based indexing so the subarray {5, 6} will be reversed and our 
 output array will be {1, 2, 3, 4, 6, 5}.
 
+Solution:
+import java.util.*;
+class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int m = sc.nextInt();
+    int n = sc.nextInt();
+    int a[]=new int[n];
+  
+  for(int i = 0; i < n; i++){
+  a[i]=sc.nextInt();
+  }
+  reverse(a, m);
+  for (int i = 0; i < a.length; i++) {
+	      System.out.print(a[i]);
+	  }
+}
+	public static void reverse(int[] a, int m) {
+	    int i = m + 1;
+	    int j = a.length - 1;
+	    while(i <= j) {
+	        int temp = a[i];
+	        a[i] = a[j];
+	        a[j] = temp;
+	        i++;
+	        j--;
+	  
+	    }
+	}
+}
+
+input:
+2
+5
+1 2 3 4 5
+
+output:
+1 2 3 5 4
+
 
 
 
@@ -38,3 +77,10 @@ class Main {
 	    }
 	}
 }
+input:
+5
+1 2 3 4 5
+
+output:
+5 4 3 2 1
+
