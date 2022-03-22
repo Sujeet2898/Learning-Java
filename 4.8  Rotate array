@@ -1,0 +1,58 @@
+import java.util.*;
+public class Solution
+{
+	public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int k = sc.nextInt(); 
+    int n = sc.nextInt();
+    int a[]=new int[n];
+  
+    for(int i = 0; i < n; i++){
+    a[i]=sc.nextInt();
+   }
+   
+  rotate(a, k);
+  
+  for (int i = 0; i < a.length; i++) {
+	      System.out.print(a[i]);
+	  }
+	}
+	
+	public static void reverse(int[] a, int i, int j) {
+	    int li = i;
+	    int ri = j;
+	    
+	    while(li < ri) {
+	        int temp = a[li];
+	        a[li] = a[ri];
+	        a[ri] = temp;
+	        
+	        li++;
+	        ri--;
+	    }
+	}
+	
+	public static void rotate(int[] a, int k) {
+	    k = k % a.length;       //put modulus first
+	    if(k < 0) {
+	        k = k + a.length;
+	    }
+	    
+	    // part 1
+	    reverse(a, 0, a.length - k - 1);
+	    
+	    //part 2
+	    reverse(a, a.length - k, a.length - 1);
+	    
+	    //all 
+	    reverse(a, 0, a.length - 1);    
+	}
+}
+
+input:
+2
+5
+1 2 3 4 5
+
+output:
+4 5 1 2 3
