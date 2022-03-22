@@ -1,0 +1,134 @@
+Example 1: Find the maximum of two numbers using the built-in method.
+
+ 
+
+public class MaxOfTwoNumbers {
+	public static void main(String args[]) {
+	
+		// Maximum of two numbers using Math.max()
+		int maximum = Math.max(100, 30);
+		System.out.println(maximum);
+	}
+}
+ 
+
+Output:
+
+ 
+
+100
+ 
+
+Example 2: Find the minimum of two numbers using the built-in method.
+
+ 
+
+public class MinOfTwoNumbers {
+	public static void main(String args[]) {
+	
+		// Minimum of two numbers using Math.min()
+		int minimum = Math.min(100, 30);
+		System.out.println(minimum);
+	}
+}
+ 
+
+Output:
+
+ 
+
+30
+ 
+
+Example 3: Find the square root of a number using the built-in method.
+
+ 
+
+public class SqrtOfNumber {
+	public static void main(String args[]) {
+	
+		// Finding the square root of a number using Math.sqrt()
+		double sqrt = Math.sqrt(144);
+		System.out.println(sqrt);
+	}
+}
+ 
+
+Output:
+
+ 
+
+12.0
+ 
+
+Example 4: Find string length using the built-in method.
+
+ 
+
+public class FindStringLength {
+	public static void main(String args[]) {
+	
+		String str = "Coding Ninjas";
+		
+		// Printing string length using length()
+		System.out.println(str.length());               
+	}
+}
+ 
+
+Output:
+
+ 
+
+13
+ 
+
+Example 5: Convert the string into the upper case using the built-in method.
+
+ 
+
+public class UpperCaseString {
+	public static void main(String args[]) {
+	
+		String str = "Coding Ninjas";
+		
+		// Printing upper case string using toUpperCase()
+		System.out.println(str.toUpperCase());               
+	}
+}
+ 
+
+Output:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Problem Statement
+Write a function to print "Hello World".
+
+
+
+
+class Solution {
+	
+	public void print() {
+		System.out.println("Hello World");
+	}
+	
+	public static void main(String args[]) {
+		Solution obj = new Solution();
+		obj.print();
+	}
+}
