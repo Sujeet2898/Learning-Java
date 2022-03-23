@@ -1,0 +1,149 @@
+1. String "Length" Method
+ 
+
+String class provides length() method to determine the length of the Java String. It returns the number of characters contained in the string object.
+
+ 
+
+Example:
+ 
+
+public class HelloWorld {
+
+    public static void main(String args[]) {
+        String str = "Coding Ninjas";
+        System.out.println("Length of String: " + str.length());
+    }
+    
+}
+ 
+
+Output:
+ 
+
+Length of String: 13
+ 
+
+ 
+
+2. String "indexOf" Method
+ 
+
+String class provides indexOf() method to get the index of a character in Java String. It returns the index within this string of the first occurrence of the specified character.
+
+ 
+
+Example:
+ 
+
+public class HelloWorld {
+
+    public static void main(String args[]) {
+        String str = "Coding Ninjas";
+
+        System.out.println("Index of character 's': " + str.indexOf('s'));
+        System.out.println("Index of character 'i': " + str.indexOf('i'));      // gives index of first 'i' character
+    }
+    
+}
+ 
+
+Output:
+ 
+
+Index of character 's': 12
+Index of character 'i': 3
+ 
+
+ 
+
+3. String "contains" Method
+ 
+
+String class provides the contains() method to check if a string contains another string (sequence of char values). It returns true if and only if the string contains the specified sequence of char values.
+
+ 
+
+Example:
+ 
+
+public class HelloWorld {
+
+    public static void main(String args[]) {
+        String str = "Coding Ninjas";
+
+        System.out.println("Contains sequence ing: " + str.contains("ing"));
+        System.out.println("Contains sequence ings: " + str.contains("ings"));
+    }
+    
+}
+ 
+
+Output:
+ 
+
+Contains sequence ing: true
+Contains sequence ings: false
+ 
+
+ 
+
+4. String "endsWith" Method
+ 
+
+String class provides endsWith() method to check if the string ends with the specified suffix. It returns true if the string ends with the given suffix; else returns false.
+
+ 
+
+Example:
+ 
+
+public class HelloWorld {
+
+    public static void main(String args[]) {
+        String str = "Coding Ninjas";
+
+        System.out.println("EndsWith character 's': " + str.endsWith("s"));
+        System.out.println("EndsWith character 'g': " + str.endsWith("g"));
+    }
+    
+}
+ 
+
+Output:
+ 
+
+EndsWith character 's': true
+EndsWith character 'g': false
+ 
+
+ 
+
+5. String Java "toLowerCase" & Java "toUpperCase"
+ 
+
+String class provides toLowerCase() and toUpperCase() methods to convert the string to lowercase and uppercase characters, respectively.
+
+ 
+
+Example:
+ 
+
+public class HelloWorld {
+
+    public static void main(String args[]) {
+        String str = "Coding Ninjas";
+
+        System.out.println("Convert to LowerCase: " + str.toLowerCase());
+        System.out.println("Convert to UpperCase: " + str.toUpperCase());
+    }
+    
+}
+ 
+
+Output:
+ 
+
+Convert to LowerCase: coding ninjas
+Convert to UpperCase: CODING NINJAS
+ 
