@@ -1,0 +1,37 @@
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String s = scn.nextLine();
+		
+		//  For removing spaces
+		
+		//s = s.replaceAll("\\s","");
+		//System.out.println(s);
+		
+		int[] arr = new int[127];
+		
+		// For checking character, how many times it's repeating
+		for (int i = 0; i < s.length(); i++) {
+		    arr[s.charAt(i)] = arr[s.charAt(i)] + 1;
+		}
+		
+		int max = -1;
+		char ch = ' ';
+		
+		for (int i = 0; i < s.length(); i++) {
+		    if (max < arr[s.charAt(i)]) {
+		        max = arr[s.charAt(i)];
+		        ch = s.charAt(i);
+		    }
+		}
+		System.out.println("maximum repeated character is " + ch);
+	}
+}
+
+input:
+hello my name is sujeet
+
+output:
+e
+
