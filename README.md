@@ -48,11 +48,14 @@ Part 4: Arrays
 10. Kth Smallest and Largest Element of Array
 
 Part 5: Strings
-1. Count Words
-2. All substrings
-3. Reverse String Word Wise
-4. Remove character
-5. Reverse Each Word
+1. Important Java Methods
+2. Given a string check whether it is Palindrome or not
+3. Given a string, find the character which occurred maximum in the string
+4. Count Words
+5. All substrings
+6. Reverse String Word Wise
+7. Remove character
+8. Reverse Each Word
 
 Part 6: Object Oriented Programming in Java
 1. Area of a Rectangle
