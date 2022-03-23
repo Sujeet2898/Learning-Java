@@ -2,15 +2,20 @@ Problem Statement
 You have been given an integer array/list(ARR) of size 'N'. It only contains 0s, 1s and 2s. Write a solution to sort this array/list.
 
 
-public staic void sort012(int[] arr) {
-	    int j = 0;                   // 0 to j - 1     -> 0's area
-	    int i = 0;                   // j to i - 1     -> 1's area
-	    int k = arr.length - 1;      // k+1  to  end      -> 2's area
+import java.util.*;
+public class Main {
+    public static void sort012(int[] arr) {
+      int j = 0;        // 0 to j - 1     -> 0's area
+	    int i = 0;        // j to i - 1     -> 1's area
+	    int k = arr.length - 1;    // k+1  to  end      -> 2's area
 	    
 	    // i to k is Unknown
 	    while (i <= k) {
 	        if (arr[i] == 0) {
-	            swap(arr, i, j);
+	          //  swap(arr, i, j);
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
 	            i++;
 	            j++;
 	            
@@ -18,10 +23,35 @@ public staic void sort012(int[] arr) {
 	          i++;
 	          
 	        } else {
-	            swap(arr, i, k);
+	          //  swap(arr, i, k);
+                int temp2 = arr[i];
+                arr[i] = arr[k];
+                arr[k] = temp2;
 	            k--;
 	            
 	        }
 	    }
-	}
+    }
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int arr[]=new int[n];
+  
+  for(int i = 0; i < n; i++){
+  arr[i]=sc.nextInt();
+  }
+  sort012(arr);
+  for (int i = 0; i < arr.length; i++) {
+	      System.out.print(arr[i] + " ");
+	  }
+    }
 }
+
+input:
+10
+2 2 0 1 0 2 0 2 1 1
+
+output:
+0 0 0 1 1 1 2 2 2 2
+
+
