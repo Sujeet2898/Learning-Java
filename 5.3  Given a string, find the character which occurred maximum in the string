@@ -9,7 +9,7 @@ public class Main{
 		//s = s.replaceAll("\\s","");
 		//System.out.println(s);
 		
-		int[] arr = new int[127];
+		int[] arr = new int[127];     // put either 127 or 256
 		
 		// For checking character, how many times it's repeating
 		for (int i = 0; i < s.length(); i++) {
