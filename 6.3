@@ -1,0 +1,36 @@
+Problem Statement
+Create a class Square which has both default constructor and parameterized constructor, a length parameter, and a printArea method which take the length as an argument and prints the area. In the case of the default parameter, the default value of length will be equal to 10.
+All the Input and Output methods are take care by compiler you don't have to worry about it.
+
+
+
+class Square {
+// Write your code here
+   int length;
+   Square(){
+       this.length = 10;
+       System.out.println(getArea(this.length));
+   }
+   Square(int length){
+       this.length = length;
+       System.out.println(getArea(this.length));
+   }
+   
+   int getArea(int length){
+      return length*length;
+   }
+}
+
+class Solution {
+
+public static void main(String args[]) {
+ 
+ // Write your code here
+ Square square = new Square();
+       Square square2 = new Square(7);
+}
+}
+
+output:
+100
+49
