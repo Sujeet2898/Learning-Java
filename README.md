@@ -55,8 +55,9 @@ Part 5: Strings
 5. Count vowels and consonants in a string
 6. All substrings
 7. Reverse String Word Wise
-8. Remove character
-9. Reverse Each Word
+8. Remove all the occurrences of a character from the string
+9. Character frequency in a String
+10. Reverse Each Word
 
 Part 6: Object Oriented Programming in Java
 1. Area of a Rectangle
