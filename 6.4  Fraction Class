@@ -1,0 +1,116 @@
+Problem Statement
+Implement Fraction Class with the following properties and functions.
+Properties :
+1.Numerator
+2.Denominator
+Functions :
+1. Parametrized Constructor-
+Sets the numerator and denominator values.
+2. Add-
+This function adds the two fraction following the adding up of two fraction rules and updates the first fractional number.
+e.g.
+if f1 = 1/4 and f2 = 3/5
+f1.add(f2); results in: 
+f1 = 17/20 and f2 = 3/5
+3.Multiply-
+This function multiplies the two fraction and updates the first fractional number.
+e.g.
+if f1 = 1/4 and f2 = 3/5
+f1.multiply(f2); results in: 
+f1 = 3/20 and f2 = 3/5
+4.Simplify
+This function simplifies the fractional value. Use inbuilt __gcd() function.
+e.g.
+if f1=5/20, which can be further simplified as 1/4 so this 
+simplify will perform this.
+5. Print() -
+Prints the final answer in numerator/denominator form.
+
+
+
+Solution:
+
+import java.util.Scanner;
+class Fraction {
+int num,deno;
+   public Fraction(int n,int d){
+       this.num = n;
+       this.deno = d;
+   }
+   public void simplify(){
+       int gcd = Calculategcd(num,deno);
+       num/=gcd;
+       deno/=gcd;
+   }
+   public void add(Fraction f){
+       int lcm = deno*f.deno;
+       int nu = lcm/deno;
+       int de = lcm/f.deno;
+       int n = nu*num+(de*f.num);
+       num =n;
+       deno = lcm;
+       simplify();
+   }
+   public void mult(Fraction f){
+       num = num*f.num;
+       deno = deno*f.deno;
+       simplify();
+   }
+   public void print(){
+       System.out.println(num+"/"+deno);
+   }
+
+   static int Calculategcd(int a, int b){
+    if (a == 0) return b;
+       return Calculategcd(b%a, a);
+  }
+}
+
+class Solution {
+public static void main(String args[]) {
+ Scanner sc = new Scanner(System.in);
+       int n1 = sc.nextInt();
+       int d1 = sc.nextInt();
+       Fraction f1 = new Fraction(n1,d1);
+       int queries = sc.nextInt();
+
+       for(int i=0;i<queries;i++){
+           int choice = sc.nextInt();
+           int n2 = sc.nextInt();
+           int d2 = sc.nextInt();
+           Fraction f2 = new Fraction(n2,d2);
+           if(choice == 1){
+               f1.add(f2);
+               f1.print();
+           }else{
+               f1.mult(f2);
+               f1.print();
+           }
+       }
+   }
+}
+
+Sample Input 1:
+67 14
+1
+2 7 78
+Sample Output 1:
+67/156
+Explanation Of Sample Input 1:
+Fist fraction is 67/14 and no. of queries is 1. So now 
+in the next line 2 7 8 means type=2 which defines 
+multiplication and second fraction is 7/78 so 67/74 * 7/78=67/156.
+Sample Input 2:
+47 71
+3
+1 91 78
+2 67 75
+1 36 74
+Sample Output 2:
+779/426
+52193/31950
+2506241/1182150
+Explanation Of Sample Input 2:
+Given fraction is 47/71 and no. of queries is 3. So now in the next 3 lines 1 91 78 means type = 1 which defines addition and second fraction is 91/78 so 47/71 + 91/78= 779/426.   
+Next query is 2 67 75 means type=2 which defines multiplication and second fraction is 67/75 so 52193/31950 * 67/75= 52193/31950.  
+Last query is 1 36 74 means type=1 which defines addition and second fraction is 36/74 so 52193/31950 + 36/74 = 2506241/1182150.
