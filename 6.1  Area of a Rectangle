@@ -1,0 +1,25 @@
+Problem Statement
+Design a class called Rectangle. It contains two data members as length(L) and breadth(B); and a member function getArea(). The member function computes the area of the given rectangle and returns it to the caller.
+Note:
+Area of a rectangle = length x breadth
+
+
+Solution:
+
+public class Rectangle { 
+    // Write your code here.
+    public static int length;
+
+   public static int breadth;
+
+   int getArea(){
+
+       return length*breadth;
+
+   }
+}
+
+Input:
+4 20
+Output:
+80
