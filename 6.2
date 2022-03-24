@@ -1,0 +1,94 @@
+Problem Statement
+A ComplexNumber class contains two data members: one is the real part (R) and the other is imaginary (I) (both integers).
+Implement the Complex numbers class that contains the following functions -
+1. Constructor
+You need to create the appropriate constructor.
+2. Plus -
+This function adds two given complex numbers and updates the first complex number.
+e.g.
+if C1 = 4 + i5 and C2 = 3 +i1
+C1.plus(C2) results in: 
+C1 = 7 + i6 and C2 = 3 + i1
+3. Multiply -
+This function multiplies two given complex numbers and updates the first complex number.
+e.g.
+if C1 = 4 + i5 and C2 = 1 + i2
+C1.multiply(C2) results in: 
+C1 = -6 + i13 and C2 = 1 + i2
+4. Print -
+This function prints the given complex number in the following format :
+a + ib
+Note: There is space before and after '+' (plus sign) and no space between 'i' (iota symbol) and b.
+
+
+
+Solution:
+
+import java.util.*;
+class ComplexNumbers {
+static int[] r = new int[2];
+   static int[] i = new int[2];
+   static int k =0;
+   
+   ComplexNumbers(int real,int imag)
+   {
+       r[k]=real;
+       i[k]=imag;
+       k++;      
+   }
+
+// Write your code here
+    public void plus()
+    {
+        int a = r[0]+r[1];
+        int b = i[0]+i[1];
+     System.out.println(a+" "+"+"+" "+"i"+b);  
+    }
+
+    public void multiply()
+    {
+    int a = r[0]*r[1]-i[0]*i[1];
+    int b = r[0]*i[1]+r[1]*i[0];
+    System.out.println(a+" "+"+"+" "+"i"+b);  
+    }
+}
+
+class Solution {
+public static void main(String[] args) {
+
+ // Write your code here
+    Scanner sc = new Scanner(System.in);
+    int r1 = sc.nextInt();
+    int i1 = sc.nextInt();
+    int r2 = sc.nextInt();
+    int i2 = sc.nextInt();
+    int n = sc.nextInt();
+
+    ComplexNumbers c1 = new ComplexNumbers(r1,i1);
+    ComplexNumbers c2 = new ComplexNumbers(r2,i2);
+
+    switch(n)
+    {
+        case 1 :  
+            c1.plus();
+            break;
+        case 2 :  
+            c1.multiply();
+            break;
+    }     
+  }
+}
+
+
+Sample Input 1 :
+4 5
+6 7
+1
+Sample Output 1 :
+10 + i12
+Sample Input 2 :
+4 5
+6 7
+2
+Sample Output 2 :
+-11 + i58
