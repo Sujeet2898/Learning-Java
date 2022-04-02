@@ -59,6 +59,8 @@ public static boolean isSortedBetter(int a[], int si) {
         for (int i = 0; i < a.length; i++) {
             a[i] = scn.nextInt();
         }
+	
+	int si = 0;
         System.out.println(isSortedBetter(a, si));
     
 	}
