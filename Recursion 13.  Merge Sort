@@ -39,6 +39,7 @@ public class Main{
             return;
         }
         
+	// Splitting array into two parts
         int b[] = new int[a.length/2];
         int c[] = new int[a.length - b.length];
         
