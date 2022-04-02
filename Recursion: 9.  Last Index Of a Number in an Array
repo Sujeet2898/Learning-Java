@@ -1,0 +1,48 @@
+Given an array of length N and an integer x, you need to find and return the last index of integer x present in the array. Return -1 if it is not present in the array.
+Last index means - if x is present multiple times in the array, return the index at which x comes last in the array.
+You should start traversing your array from 0, not from (N - 1).
+Do this recursively. Indexing in the array starts from 0.
+
+
+import java.util.*;
+class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int a[]=new int[n];
+  
+  for(int i = 0; i < n; i++){
+  a[i]=sc.nextInt();
+  }
+
+ int x=sc.nextInt();
+ int si = 0;
+ System.out.println(lastIndexBetter(a, x, si));
+    }
+  
+  public static int lastIndexBetter(int a[], int x, int si) {
+    if(si == a.length) {
+        return -1;
+    } 
+    
+    int k =lastIndexBetter(a, x, si + 1);
+    if (k != -1) {
+        return k;
+    } else {
+        if(a[si] == x) {
+        return si;
+     } else {
+         return -1;
+       }
+     }
+    }
+  }
+  
+  
+  Sample Input :
+4
+9 8 10 8
+8
+Sample Output :
+3
+  
