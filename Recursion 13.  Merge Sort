@@ -2,9 +2,11 @@ import java.util.*;
 public class Main{
     
     public static void merge(int s1[], int s2[], int d[]){
-       int i = 0;
-       int j = 0;
-       int k = 0;
+       int i = 0;       // element in s1
+       int j = 0;       // element in s2
+       int k = 0;       // element in d
+       
+       // Copying elements of s1 and s2 into d by comparing
        while (i < s1.length && j < s2.length) {
            if (s1[i] <= s2[j]) {
                d[k] = s1[i];
@@ -17,6 +19,7 @@ public class Main{
            }
        }
        
+       // Copying remaining elements of s1 and s2 into d i.e original array (distinction)
        if (i < s1.length) {
        while (i < s1.length) {
                d[k] = s1[i];
@@ -43,14 +46,17 @@ public class Main{
         int b[] = new int[a.length/2];
         int c[] = new int[a.length - b.length];
         
-        for (int i = 0; i < a.length/2; i++) {
+        // Coping half elements of a into b
+	for (int i = 0; i < a.length/2; i++) {
             b[i] = a[i];
         }
         
+	// Coping remaining elements of a into c
         for (int i = a.length/2; i < a.length; i++) {
             c[i - a.length/2] = a[i];
         }
-        mergeSort(b);
+        
+	mergeSort(b);
         mergeSort(c);
         merge(b, c, a);
     }
