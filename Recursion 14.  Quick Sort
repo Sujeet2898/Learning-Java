@@ -21,8 +21,8 @@ public class Main{
             } else if (a[j] >= pivotElement) {
                 j--;
             } else {
-                temp = a[i];
-                a[i] = a[j];
+                temp = a[i];      // If both above condition is incorrect
+                a[i] = a[j];      // So, we swap both wrong elements left and right of pivotElement
                 a[j] = temp;
                 i++;
                 j--;
