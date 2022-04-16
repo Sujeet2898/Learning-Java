@@ -28,7 +28,7 @@ public class Main{
                 j--;
             }
         }
-        return si + smallerNumCount;
+        return si + smallerNumCount;    // return pivotIndex
     }
     
     public static void quickSort(int a[], int si, int ei) {
